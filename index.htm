@@ -33,6 +33,7 @@
         padding: 0;
         text-align: center;
         text-decoration: none;
+        user-select: none;
 
     }
 
@@ -277,34 +278,41 @@
                 src="https://res.cloudinary.com/fotoqe123/image/upload/v1704985849/qr/Portada-nueva_rvsuze.png" alt="">
         </div>
     </dir>
-
+ 
     <div class="caja-bt">
-        <a href="https://www.mediafire.com/folder/sh7985tx0feuu">
+         <!---  <a href="https://www.mediafire.com/folder/sh7985tx0feuu">
             <div class="caja-bt-uno">
                 <img class="img-bt-logo"
                     src="https://res.cloudinary.com/fotoqe123/image/upload/v1705416180/qr/IMG_7504_iaiecr.jpg" alt="">
-                <button class="btd">14 años</button>
+                <button class="btd">Caferias</button>
+            </div>
+        </a>
+-->
+        <a href="https://www.mediafire.com/folder/yi04x8zqq0biz/Campo+jardin">
+            <div class="caja-bt-uno">
+                <img class="img-bt-logo"
+                    src="https://res.cloudinary.com/fotoqe123/image/upload/v1705515236/qr/WhatsApp-Image-2023-09-09-at-2.11_-_copia_azuqhu.jpg" alt="">
+                <button class="btd">Campo jadin</button>
             </div>
         </a>
 
-        <a href="https://www.mediafire.com/folder/dojc4hvgap7wd">
+
+        <a href="https://www.mediafire.com/folder/rnnwgsim53zst/jumbo">
             <div class="caja-bt-uno">
                 <img class="img-bt-logo"
-                    src="https://res.cloudinary.com/fotoqe123/image/upload/v1705416049/qr/IMG_4620_boibwu.jpg" alt="">
-                <button class="btd">15 Años</button>
-            </div>
-        </a>
-
-
-        <a href="https://www.mediafire.com/folder/ivykltuizk3g6/jumbo">
-            <div class="caja-bt-uno">
-                <img class="img-bt-logo"
-                    src="https://res.cloudinary.com/fotoqe123/image/upload/v1705416268/qr/IMG_5308_-_copia_to4x70.jpg"
+                    src="https://res.cloudinary.com/fotoqe123/image/upload/v1705515053/qr/IMG_4103-v1_cmrpjx.jpg"
                     alt="">
                 <button class="btd">Jumbo</button>
             </div>
         </a>
     </div>
+    <div class="qr-c">
+        <div style="display: flex; justify-content: center; align-items: center;"><p>Qr Descargar App Web</p></div>
+    
+    <img class="qr" src="https://res.cloudinary.com/fotoqe123/image/upload/v1704218653/qr/qr-code_17_wrdkix.png"
+        alt="">
+        <i id="shareBtn" class="fa-sharp fa-solid fa-square-share-nodes" style="color: #fff; font-size: 30px; margin-top: 15px;"></i>
+</div>
     <!--
 <div class="m">
     <p>best moments</p>
@@ -312,12 +320,7 @@
         alt="">
 
 </div>
-<div class="qr-c">
-    <p>Qr Para descargar App Completo</p>
-    <img class="qr" src="https://res.cloudinary.com/fotoqe123/image/upload/v1704218653/qr/qr-code_17_wrdkix.png"
-        alt="">
 
-</div>
 <div class="com">
  
 
@@ -432,6 +435,25 @@
             }, 3000);
         }
 
+    </script>
+    <script>
+
+const shareBtn = document.getElementById('shareBtn')
+        shareBtn.addEventListener('click', event => {
+            if (navigator.share) {
+                //drive
+                navigator.share({
+                    text: 'Enviar Pagina: ',
+                    url: 'https://ruizlhuis.github.io/f2/'
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                })
+                    .catch((err) => console.error(err));
+            } else {
+
+                alert("The current browser does not support the share function. Please, manually share the link")
+            }
+        });
     </script>
     <script>
         function qr1() {
